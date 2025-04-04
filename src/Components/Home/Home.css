@@ -1,0 +1,15 @@
+#home{
+    background-image: url(../../assets/Images/bg.jpg) ;
+    background-size: cover;
+    opacity: 0.7;
+    height: 100vh;
+    padding: 100px 20px;
+ }
+ .text{
+    text-align: center;
+    font-weight: bold 200px;
+}
+.title{
+    margin-top: 170px;
+}
+    
