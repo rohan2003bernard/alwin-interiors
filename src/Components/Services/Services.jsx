@@ -1,5 +1,9 @@
 import React from 'react'
 import './Services.css'
+import imgKt from '../../assets/Images/img.kt.jpg';
+import img2 from '../../assets/Images/img2.jpg'
+import img3 from '../../assets/Images/img3.jpg'
+
 
 const Services = () => {
   return (
@@ -15,16 +19,22 @@ const Services = () => {
         </ul>
         <div className="con">
             <div>   
-              <h2>Dressing Table</h2>
-              <img src="https://9creation.com.sg/wp-content/uploads/2022/04/Bedroom-scaled.jpg" height="60%" width="60%"/>
+              <h2></h2>
+              <div className='image-container'>
+               <img src={imgKt} height='85%' width='85%' className='zoom-image'/>
+              </div>
             </div>
             <div>
-              <h2>Bed Room</h2>
-              <img src="http://media.architecturaldigest.com/photos/5640d41b7caa1a6554abcb93/master/pass/contemporary-bedroom-ideas-inspiration-10.jpg" height="60%" width="60%"/>
+              <h2></h2>
+              <div className='image-container'>
+                <img src={img2}  height='80%' width='80%'  className='zoom-image'/> 
+              </div>  
             </div>
             <div>
-              <h2>Main Hall</h2>
-              <img src="https://cdn1.npcdn.net/images/bbfb176bad609bb7fe6ffb197fcf09a7_1702030724.webp?md5id=5f74249208205551b0714e4c5dcca970&new_width=1000&new_height=1000&size=max&w=1671530035&from=jpeg&type=1" height="75%" width="85%"/>
+              <h2></h2>
+              <div className='image-container'>
+                <img src={img3}  height='80%' width='80%' className='zoom-image'/>
+              </div>  
             </div>
           </div> 
     </div>
