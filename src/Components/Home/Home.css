@@ -8,12 +8,12 @@
   box-sizing: border-box;
 }
 .home {
-  padding: 189px 100px 48px 100px;
+  padding: 120px 2em 48px 2em;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  height: 1024px;
+  height: 50rem;
   position: relative;
   overflow: hidden;
   background: url(../../assets/Images/bg.jpg) center;
