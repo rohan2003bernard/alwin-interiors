@@ -1,4 +1,106 @@
-#contact{
-    background-color: #333;
-    color: white;
+.contact,
+.contact * {
+  box-sizing: border-box;
+}
+.contact {
+  background: #333333;
+  padding: 51px 80px 51px 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 1017px;
+  position: relative;
+  overflow: hidden;
+}
+.contact2 {
+  color: #ffffff;
+  text-align: center;
+  font-family: "NotoSerif-Bold", sans-serif;
+  font-size: 52px;
+  font-weight: 700;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.note {
+  color: #ffffff;
+  text-align: center;
+  font-family: "NotoSerif-Bold", sans-serif;
+  font-size: 23px;
+  font-weight: 700;
+  position: relative;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.details {
+  display: flex;
+  flex-direction: row;
+  row-gap: 97px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-content: center;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.email {
+  color: #ffffff;
+  text-align: center;
+  font-family: "NotoSerif-Bold", sans-serif;
+  font-size: 23px;
+  font-weight: 700;
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.phone {
+  color: #ffffff;
+  text-align: center;
+  font-family: "NotoSerif-Bold", sans-serif;
+  font-size: 23px;
+  font-weight: 700;
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.address {
+  color: #ffffff;
+  text-align: center;
+  font-family: "NotoSerif-Bold", sans-serif;
+  font-size: 23px;
+  font-weight: 700;
+  position: relative;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.thankyou {
+  color: #ffffff;
+  text-align: center;
+  font-family: "NotoSerif-Bold", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  position: relative;
+  width: 445px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pic {
+  flex-shrink: 0;
+  width: 174px;
+  height: 174px;
+  position: relative;
+  object-fit: cover;
+  aspect-ratio: 1;
 }

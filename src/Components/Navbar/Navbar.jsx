@@ -38,7 +38,7 @@ const Navbar = () => {
                 <button id="menu-button" onClick={toggleSidebar}>&#9776;</button> {/* Menu icon */}
                 <ul>
                     <li><Link smooth={true} duration={500} to="home">Home</Link></li>
-                    <li><Link smooth={true} duration={500} to="about">About</Link></li>
+                    <li><Link smooth={true} duration={500} to="about-us">About</Link></li>
                     <li><Link smooth={true} duration={500} to="services">Services</Link></li>
                     <li><Link smooth={true} duration={500} to="contact">Contact</Link></li>
                 </ul>
@@ -48,7 +48,7 @@ const Navbar = () => {
                 <span id="close-button" onClick={toggleSidebar}>&times;</span> {/* Close icon */}
                 <ul>
                     <li><Link onClick={closeSidebar} smooth={true} duration={500} to="home">Home</Link></li>
-                    <li><Link onClick={closeSidebar} smooth={true} duration={500} to="about">About</Link></li>
+                    <li><Link onClick={closeSidebar} smooth={true} duration={500} to="about-us">About</Link></li>
                     <li><Link onClick={closeSidebar} smooth={true} duration={500} to="services">Services</Link></li>
                     <li><Link onClick={closeSidebar} smooth={true} duration={500} to="contact">Contact</Link></li>
                 </ul>
