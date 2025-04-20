@@ -17,7 +17,7 @@
   color: #ffffff;
   text-align: center;
   font-family: "NotoSerif-Bold", sans-serif;
-  font-size: 52px;
+  font-size: 2.5rem;
   font-weight: 700;
   position: relative;
   display: flex;
@@ -28,7 +28,7 @@
   color: #ffffff;
   text-align: center;
   font-family: "NotoSerif-Bold", sans-serif;
-  font-size: 23px;
+  font-size: 1.4375rem;
   font-weight: 700;
   position: relative;
   align-self: stretch;
@@ -101,4 +101,26 @@
   position: relative;
   object-fit: cover;
   aspect-ratio: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .contact {
+    padding: 20px 1em;
+    gap: 5rem;
+  }
+  .contact2 {
+    font-size: 2rem;
+  }
+  .note {
+    font-size: 1.25rem;
+  }
+  .email,
+  .phone,
+  .address {
+    font-size: 1.5rem;
+  }
+  .thankyou {
+    font-size: 2rem;
+  } 
+  
 }

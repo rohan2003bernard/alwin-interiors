@@ -1,8 +1,17 @@
 import React from 'react';
 import './Services.css';
-import imgKt from '../../assets/Images/img.kt.jpg';
+import img1 from '../../assets/Images/img1.jpg';
 import img2 from '../../assets/Images/img2.jpg';
 import img3 from '../../assets/Images/img3.jpg';
+import img4 from '../../assets/Images/img4.jpg';
+import img5 from '../../assets/Images/img5.jpg';
+import img6 from '../../assets/Images/img6.jpg';
+import img7 from '../../assets/Images/img7.jpg';
+import img8 from '../../assets/Images/img8.jpg';
+import img9 from '../../assets/Images/img9.jpg';
+import img10 from '../../assets/Images/img10.jpg';
+import img11 from '../../assets/Images/img11.jpg';
+import img12 from '../../assets/Images/img12.jpg';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 AOS.init();
@@ -58,7 +67,7 @@ const Services = () => {
     ]
   };
 
-  const galleryImages = [imgKt, img2, img3];
+  const galleryImages = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12];
 
   return (
     <div className="menu">

@@ -1,6 +1,5 @@
 import React from 'react'
 import './Contact.css'
-import thumbsup from '../../assets/Images/thumbsup.png'
 
 const Contact = () => {
   return (
