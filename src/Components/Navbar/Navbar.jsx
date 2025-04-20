@@ -39,7 +39,7 @@ const Navbar = () => {
                 <ul>
                     <li><Link smooth={true} duration={500} to="home">Home</Link></li>
                     <li><Link smooth={true} duration={500} to="about-us">About</Link></li>
-                    <li><Link smooth={true} duration={500} to="services">Services</Link></li>
+                    <li><Link smooth={true} duration={500} to="menu">Services</Link></li>
                     <li><Link smooth={true} duration={500} to="contact">Contact</Link></li>
                 </ul>
             </div>
@@ -49,7 +49,7 @@ const Navbar = () => {
                 <ul>
                     <li><Link onClick={closeSidebar} smooth={true} duration={500} to="home">Home</Link></li>
                     <li><Link onClick={closeSidebar} smooth={true} duration={500} to="about-us">About</Link></li>
-                    <li><Link onClick={closeSidebar} smooth={true} duration={500} to="services">Services</Link></li>
+                    <li><Link onClick={closeSidebar} smooth={true} duration={500} to="menu">Services</Link></li>
                     <li><Link onClick={closeSidebar} smooth={true} duration={500} to="contact">Contact</Link></li>
                 </ul>
             </div>

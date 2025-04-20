@@ -36,7 +36,7 @@
   color: #000000;
   text-align: center;
   font-family: "NotoSerif", sans-serif;  
-  font-size: 45px;
+  font-size: 2rem;
   font-weight: 700;
   position: relative;
   display: flex;
@@ -60,7 +60,7 @@
   color: #ff9100;
   text-align: center;
   font-family: "KohSantepheap-Bold", sans-serif;
-  font-size: 27px;
+  font-size: 1.5rem;
   font-weight: 700;
   position: relative;
   flex: 1;

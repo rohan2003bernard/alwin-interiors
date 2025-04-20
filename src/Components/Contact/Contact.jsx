@@ -19,7 +19,6 @@ const Contact = () => {
     600042 (Near Ags Colony Bus Stand,)
   </div>
   <div className="thankyou">We look forward to hearing from you!</div>
-  <img className="pic" src={thumbsup} />
 </div>
   )
 }
