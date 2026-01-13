@@ -11,7 +11,7 @@ const Contact = () => {
   </div>
   <div className="details">
     <div className="email">Email: alwininteriors.india@gmail.com</div>
-    <div className="phone">Phone: 7708989697</div>
+    <div className="phone">Phone: 9585944917</div>
   </div>
   <div className="address">
     Address: 31, 2nd Main Road, Ags Colony, West Velacheri, Velacheri, Chennai -
