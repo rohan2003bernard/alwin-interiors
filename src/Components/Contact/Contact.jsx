@@ -3,22 +3,35 @@ import './Contact.css'
 
 const Contact = () => {
   return (
-    <div className="contact">
-  <div className="contact2">Contact</div>
-  <div className="note">
-    If you have any questions or would like to get in touch with us, please feel
-    free to reach out. You can contact us through the following channels:
-  </div>
-  <div className="details">
-    <div className="email">Email: alwininteriors.india@gmail.com</div>
-    <div className="phone">Phone: 9585944917</div>
-  </div>
-  <div className="address">
-    Address: 31, 2nd Main Road, Ags Colony, West Velacheri, Velacheri, Chennai -
-    600042 (Near Ags Colony Bus Stand,)
-  </div>
-  <div className="thankyou">We look forward to hearing from you!</div>
-</div>
+    <div className="contact" id="contact">
+      <div className="contact__header">
+        <h2 className="contact__title">Get In Touch</h2>
+        <div className="contact__underline"></div>
+        <p className="contact__subtitle">We'd love to hear from you. Reach out to us today!</p>
+      </div>
+
+      <div className="contact__container">
+        <div className="contact__info">
+          <div className="contact__card">
+            <div className="contact__icon">📧</div>
+            <h3>Email</h3>
+            <a href="mailto:alwininteriors.india@gmail.com">alwininteriors.india@gmail.com</a>
+          </div>
+          <div className="contact__card">
+            <div className="contact__icon">📱</div>
+            <h3>Phone</h3>
+            <a href="tel:9585944917">9585944917</a>
+          </div>
+          <div className="contact__card">
+            <div className="contact__icon">📍</div>
+            <h3>Address</h3>
+            <p>31, 2nd Main Road, Ags Colony, West Velacheri, Velacheri, Chennai - 600042</p>
+          </div>
+        </div>
+      </div>
+
+      <p className="contact__footer">We look forward to hearing from you! ✨</p>
+    </div>
   )
 }
 

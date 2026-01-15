@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Services.css';
 import img1 from '../../assets/Images/img1.jpg';
 import img2 from '../../assets/Images/img2.jpg';
@@ -17,7 +17,8 @@ import 'aos/dist/aos.css';
 AOS.init();
 
 const Services = () => {
-  // Define the dictionary for menus
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+
   const menuData = {
     "Custom Furniture Making": [
       "Wardrobes",
@@ -70,38 +71,54 @@ const Services = () => {
   const galleryImages = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12];
 
   return (
-    <div className="menu">
-      <div className="ser">
-        {Object.entries(menuData).map(([menuTitle, submenuItems], index) => (
-          <div className="item" key={index}>
-            <div className="link">
-              <span>{menuTitle}</span>
-              <svg viewBox="0 0 360 360" xmlSpace="preserve">
-                <g id="SVGRepo_iconCarrier">
-                  <path
-                    id="XMLID_225_"
-                    d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393 c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393 s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z"
-                  ></path>
-                </g>
-              </svg>
-            </div>
-            <div className="submenu">
-              {submenuItems.map((submenuItem, subIndex) => (
-                <div className="submenu-item" key={subIndex}>
-                  <div className="submenu-link">{submenuItem}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        ))}
+    <div className="services" id="menu">
+      <div className="services__header">
+        <h2 className="services__title">Our Services</h2>
+        <div className="services__underline"></div>
+        <p className="services__subtitle">Comprehensive interior design solutions tailored to your needs</p>
       </div>
-      <div className="gallery">
-        {galleryImages.map((image, index) => (
-          <div data-aos="flip-up" className="card" key={index}>
-            <div className="bg">
-              <img src={image} alt={`Gallery Item ${index + 1}`} />
+
+      <div className="services__tabs-wrapper">
+        <div className="services__tabs">
+          {Object.entries(menuData).map(([menuTitle, submenuItems], index) => (
+            <div 
+              key={index}
+              className="services__tab"
+              onMouseEnter={() => setHoveredIndex(index)}
+              onMouseLeave={() => setHoveredIndex(null)}
+            >
+              <button className={`services__tab-btn ${hoveredIndex === index ? 'services__tab-btn--active' : ''}`}>
+                <span>{menuTitle}</span>
+                <svg viewBox="0 0 24 24" width="20" height="20">
+                  <path d="M7 10l5 5 5-5z" fill="currentColor"/>
+                </svg>
+              </button>
+              
+              {hoveredIndex === index && (
+                <div className="services__tab-content">
+                  {submenuItems.map((submenuItem, subIndex) => (
+                    <div className="services__tab-item" key={subIndex}>
+                      <span className="services__checkmark">✓</span>
+                      <span>{submenuItem}</span>
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
-            <div className="blob"></div>
+          ))}
+        </div>
+      </div>
+
+      <div className="services__gallery-header">
+        <h3>Our Work</h3>
+        <div className="services__gallery-underline"></div>
+      </div>
+
+      <div className="services__gallery">
+        {galleryImages.map((image, index) => (
+          <div data-aos="zoom-in" data-aos-duration="600" className="services__card" key={index}>
+            <img src={image} alt={`Gallery Item ${index + 1}`} />
+            <div className="services__card-overlay"></div>
           </div>
         ))}
       </div>

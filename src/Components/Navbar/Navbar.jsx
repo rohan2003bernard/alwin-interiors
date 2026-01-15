@@ -1,52 +1,60 @@
 import React, { useState, useEffect } from 'react';
 import './Navbar.css';
 import { Link } from 'react-scroll';
+import logo from '../../assets/Images/logo.jpeg';
 
 const Navbar = () => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-    // Handle scroll to change navbar background color
     useEffect(() => {
         const handleScroll = () => {
             const navbar = document.getElementById('navbar');
             if (window.scrollY > 50) {
-                navbar.style.backgroundColor = '#555';
+                navbar.classList.add('navbar--scrolled');
             } else {
-                navbar.style.backgroundColor = '#333';
+                navbar.classList.remove('navbar--scrolled');
             }
         };
 
         window.addEventListener('scroll', handleScroll);
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
+        return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    // Toggle sidebar visibility
     const toggleSidebar = () => {
         setIsSidebarOpen(!isSidebarOpen);
     };
 
-    // Close sidebar when a link is clicked
     const closeSidebar = () => {
         setIsSidebarOpen(false);
     };
 
     return (
         <>
-            <div id="navbar">
-                <button id="menu-button" onClick={toggleSidebar}>&#9776;</button> {/* Menu icon */}
-                <ul>
-                    <li><Link smooth={true} duration={500} to="home">Home</Link></li>
-                    <li><Link smooth={true} duration={500} to="about-us">About</Link></li>
-                    <li><Link smooth={true} duration={500} to="menu">Services</Link></li>
-                    <li><Link smooth={true} duration={500} to="contact">Contact</Link></li>
-                </ul>
-            </div>
+            <nav id="navbar" className="navbar">
+                <div className="navbar__wrapper">
+                    <div className="navbar__logo-section">
+                        <img src={logo} alt="Alwin Interiors Logo" className="navbar__logo-img" />
+                        <span className="navbar__logo-text">Alwin Interiors</span>
+                    </div>
 
-            <div id="sidebar-menu" className={isSidebarOpen ? 'active' : ''}>
-                <span id="close-button" onClick={toggleSidebar}>&times;</span> {/* Close icon */}
-                <ul>
+                    <button className="navbar__menu-btn" onClick={toggleSidebar}>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+
+                    <ul className="navbar__menu">
+                        <li><Link smooth={true} duration={500} to="home" className="navbar__link">Home</Link></li>
+                        <li><Link smooth={true} duration={500} to="about-us" className="navbar__link">About</Link></li>
+                        <li><Link smooth={true} duration={500} to="menu" className="navbar__link">Services</Link></li>
+                        <li><Link smooth={true} duration={500} to="contact" className="navbar__link">Contact</Link></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div id="sidebar-menu" className={`sidebar ${isSidebarOpen ? 'sidebar--active' : ''}`}>
+                <button className="sidebar__close" onClick={toggleSidebar}>&times;</button>
+                <ul className="sidebar__menu">
                     <li><Link onClick={closeSidebar} smooth={true} duration={500} to="home">Home</Link></li>
                     <li><Link onClick={closeSidebar} smooth={true} duration={500} to="about-us">About</Link></li>
                     <li><Link onClick={closeSidebar} smooth={true} duration={500} to="menu">Services</Link></li>
